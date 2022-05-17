@@ -19,4 +19,11 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "./style/common.scss";
+
+main {
+  height: 300px;
+  background-color: black;
+}
+</style>
