@@ -11,7 +11,9 @@
           :seriesObj="item"
         />
       </div>
-      <div></div>
+      <div class="more_series_indicator">
+        <span>LOAD MORE </span>
+      </div>
     </div>
   </div>
 </template>
@@ -130,8 +132,8 @@ div.series_container {
       span {
         color: white;
         font-size: 1.5rem;
-        background-color: #0182f9;
-        padding: 0.5rem 1rem;
+        background-color: $blue-button-default-background;
+        padding: $blue-button-default-padding;
         position: absolute;
         top: -4%;
       }
@@ -139,6 +141,15 @@ div.series_container {
     div.series_thumb_container {
       display: flex;
       flex-wrap: wrap;
+    }
+    div.more_series_indicator {
+      text-align: center;
+      padding-bottom: 2rem;
+      span {
+        background-color: $blue-button-default-background;
+        padding: $blue-button-default-padding;
+        color: $blue-button-default-color;
+      }
     }
   }
 }
