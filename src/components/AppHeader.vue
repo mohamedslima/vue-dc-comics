@@ -8,7 +8,7 @@
         <li
           v-for="(item, index) in links"
           :key="index"
-          :class="{ hover: item.active }"
+          :class="{ active: item.active }"
         >
           <a href="#"> {{ item.text }}</a>
         </li>
@@ -100,9 +100,9 @@ export default {
         list-style: none;
         margin-left: 0.8rem;
 
-        &.hover {
-          color: $menu-color-active;
-          border-bottom: $menu-border-active;
+        li.active {
+          color: blue;
+          border-bottom: 1px solid blue;
         }
         a {
           text-decoration: $leave-decoration-text;
