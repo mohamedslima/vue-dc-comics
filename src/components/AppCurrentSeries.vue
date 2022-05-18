@@ -5,7 +5,11 @@
         <span>CURRENT SERIES</span>
       </div>
       <div class="series_thumb_container">
-        <AppListSeries />
+        <AppListSeries
+          v-for="(item, index) in series"
+          :key="index"
+          :seriesObj="item"
+        />
       </div>
       <div></div>
     </div>
@@ -118,7 +122,6 @@ export default {
 
 div.series_container {
   background-color: #1c1c1c;
-  height: 550px;
   position: relative;
   div.series_width {
     width: $general-width-page;
@@ -132,6 +135,10 @@ div.series_container {
         position: absolute;
         top: -4%;
       }
+    }
+    div.series_thumb_container {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
